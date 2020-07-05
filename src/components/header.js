@@ -1,9 +1,9 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React from "react";
 import LuvLogo from "./logo"
 
 function Header() {
-  const [isExpanded, toggleExpansion] = useState(false);
+  // const [isExpanded, toggleExpansion] = useState(false);
   // const { site } = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -16,12 +16,12 @@ function Header() {
 
   return (
     <header>
-      <div className="flex flex-wrap items-center justify-between max-w-10xl p-4 mx-auto md:p-8">
+      <div className="flex flex-wrap items-center justify-around max-w-10xl p-4 mx-auto md:p-8">
         <Link to="/">
           <LuvLogo />
         </Link>
 
-        <button
+        {/* <button
           className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
@@ -33,9 +33,9 @@ function Header() {
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
-        </button>
-
-        {/* <nav
+        </button> 
+        
+        <nav
           className={`${
             isExpanded ? `block` : `hidden`
           } md:block md:flex md:items-center w-full md:w-auto`}
